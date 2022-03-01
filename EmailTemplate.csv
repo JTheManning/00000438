@@ -1,0 +1,387 @@
+"Guid","ApiVersion","Body","Description","DeveloperName","Encoding","HtmlValue","IsActive","Markup","Name","RelatedEntityType","Subject","TemplateStyle","TemplateType","UiType"
+0042ddac-bc78-4a66-83c3-cfcf93ed625c,"#N/A","
+            Hello {!Receiving_User.FirstName},
+
+            We received your request to reset your {!Community_Name} password. We can't reset your password right now. Your account is locked after too many login attempts.
+
+            {!CASE(1,
+            IF(VALUE(PASSWORD_LOCK_TIME) > 0, 1, 0), ""Try again in "" + PASSWORD_LOCK_TIME + "" minutes."",
+            IF(VALUE(PASSWORD_LOCK_TIME) < 0, 1, 0), ""Contact your "" + Community_Name + "" administrator to unlock your account."",
+            """")}
+
+            If you didn't request a password reset or haven't tried to log in to your account recently, contact your {!Community_Name} administrator or reply to this email.
+
+            Thank you,
+            {!Community_Name}
+        ","Email a user receives when they try to reset their password, but have been locked out because of too many failed login attempts.",CommunityLockoutEmailTemplate,UTF-8,"#N/A",true,"#N/A",Communities: User Lockout Email,"#N/A",You've been locked out of {!Community_Name},none,text,Aloha
+0d75d5a9-06f9-4ca7-a5c1-beaf8778c9cd,"#N/A","The submitted Prodly Moover deployment has started. Please find the deployment result here.
+
+Deployment Result Name: {!PDRI__Deployment_Result__c.Name}
+Deployment Result ID: {!PDRI__Deployment_Result__c.Id}
+Source Connection: {!PDRI__Deployment_Result__c.PDRI__Source_Connection__c}
+Target Connection: {!PDRI__Deployment_Result__c.PDRI__Target_Connection__c}","#N/A",Notify_Deployment_Started_Template,ISO-8859-1,"<table height=""400"" width=""550"" cellpadding=""5"" border=""0"" cellspacing=""5"" >
+<tr height=""400"" valign=""top"" >
+<td style="" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;"" tEditID=""c1r1"" locked=""0"" aEditID=""c1r1"" >
+<![CDATA[<font face=""arial"" style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"">The submitted Prodly Moover deployment has started. Please find the deployment result <a href=""{!PDRI__Deployment_Result__c.Link}"">here</a>.</font><div style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;""><font face=""arial""><br></font></div><div><font face=""arial"" style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"">Deployment Result Name:&nbsp;</font><font face=""arial"">{!PDRI__Deployment_Result__c.Name}</font></div><div><font face=""arial"" style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"">Deployment Result ID:&nbsp;</font><font face=""arial"">{!PDRI__Deployment_Result__c.Id}</font></div><div><font face=""arial"">Source Connection:&nbsp;{!PDRI__Deployment_Result__c.PDRI__Source_Connection__c}</font></div><div><font face=""arial"">Target Connection:&nbsp;{!PDRI__Deployment_Result__c.PDRI__Target_Connection__c}</font></div><div><font face=""arial""><br></font></div><div><font face=""arial""><br></font></div>]]></td>
+</tr>
+</table>",true,"#N/A",Notify Deployment Started Template,"#N/A",Prodly Moover Deployment Started,freeForm,html,Aloha
+3392b3b8-12b8-45a8-bab8-4af2a3cbfde2,"#N/A","*** NEW LEAD ASSIGNMENT NOTIFICATION ***  
+
+The following lead has been assigned to you.  
+Company:  {!Lead.Company} 
+Lead Name:  {!Lead.Name}  
+
+Click on the link to access the lead directly:  {!Lead.Link}",Internal notification to lead owner when new lead is assigned.,LeadsNewassignmentnotificationSAMPLE,ISO-8859-1,"#N/A",true,"#N/A",Leads:  New assignment notification (SAMPLE),"#N/A",New lead assigned to you:  {!Lead.Name} from {!Lead.Company},none,text,Aloha
+4916b895-fac1-40a2-b464-042031911cb2,"#N/A","
+            Hi {!Receiving_User.FirstName},
+
+            Your password has been reset for {!Community_Name}. Go to:
+
+            {!Community_Url}
+
+            Thanks,
+            {!Organization.Name}
+        ",Notification of new password when a user’s password is reset (because they forgot it),CommunityForgotPasswordEmailTemplate,UTF-8,"#N/A",true,"#N/A",Communities: Forgot Password Email,"#N/A",Your new {!Community_Name} password,none,text,Aloha
+4f7079ea-56b4-4f47-8ca8-b9565ea3aa30,"#N/A","*** NEW CASE ASSIGNMENT NOTIFICATION ***  
+
+The following case has been assigned to you.  
+Company:  {!Account.Name} 
+Contact Name:  {!Contact.Name} 
+Case #:  {!Case.CaseNumber} 
+Subject:  {!Case.Subject} 
+Description: {!Case.Description}  
+
+Click on the link to access the case:  {!Case.Link}",Internal notification to case owner when case is assigned.,SUPPORTNewassignmentnotificationSAMPLE,ISO-8859-1,"#N/A",true,"#N/A",SUPPORT:  New assignment notification (SAMPLE),"#N/A",Case # {!Case.CaseNumber}: {!Case.Subject} has been assigned to you.,none,text,Aloha
+52cec74e-f89b-47d4-8a94-461cb54caa37,"#N/A","*** CASE ESCALATION ALERT ***  
+
+The following case has been escalated:  
+Company:  {!Account.Name} 
+Case:  {!Case.CaseNumber}:  {!Case.Subject} 
+Owner:  {!Case.OwnerFullName}  
+
+Click on the link to access the case:  {!Case.Link}",Internal notification when case is escalated.,SUPPORTCaseescalationnotificationSAMPLE,ISO-8859-1,"#N/A",true,"#N/A",SUPPORT: Case escalation notification (SAMPLE),"#N/A",Case # {!Case.CaseNumber}: {!Case.Subject} has been escalated.,none,text,Aloha
+638bc1d2-d55e-41fd-8de1-c1625788b467,"#N/A","
+
+Dear {!Contact.FirstName},
+
+Your {!Organization.Name} Self-Service portal login and password information is below.
+
+Thank you,
+
+{!Organization.Name} Customer Support
+",Notification of login and password to new Self-Service user,SUPPORTSelfServiceNewUserLoginInformationSAMPLE,ISO-8859-1,"#N/A",true,"#N/A",SUPPORT:  Self-Service New User Login Information (SAMPLE),"#N/A",Your {!Organization.Name} Self-Service username and password,none,text,Aloha
+7111c09c-7717-48a5-892d-7c1595a1591c,"#N/A","Dear {!Lead.Name},  
+
+Thank you for your interest in {!Organization.Name}.  We will be contacting you shortly.    
+
+Sincerely,  The Team at {!Organization.Name}",Auto-response when new lead is submitted online.,LeadsWebtoLeademailresponseSAMPLE,ISO-8859-1,"#N/A",true,"#N/A",Leads:  Web-to-Lead email response (SAMPLE),"#N/A",{!Organization.Name}:  Thank you for your inquiry,none,text,Aloha
+858e569d-59fb-4456-b684-9b504e340d96,"#N/A","The submitted Prodly Moover deployment has completed with failures. Please find the deployment result here.
+
+Deployment Result Name: {!PDRI__Deployment_Result__c.Name}
+Deployment Result ID: {!PDRI__Deployment_Result__c.Id}
+Deployment Result: {!PDRI__Deployment_Result__c.PDRI__Result__c}
+Deployment Status: {!PDRI__Deployment_Result__c.PDRI__Status__c}
+Source Connection: {!PDRI__Deployment_Result__c.PDRI__Source_Connection__c}
+Target Connection: {!PDRI__Deployment_Result__c.PDRI__Target_Connection__c}","#N/A",Notify_Deployment_Failed_Template,ISO-8859-1,"<table height=""400"" width=""550"" cellpadding=""5"" border=""0"" cellspacing=""5"" >
+<tr height=""400"" valign=""top"" >
+<td style="" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;"" tEditID=""c1r1"" locked=""0"" aEditID=""c1r1"" >
+<![CDATA[<font face=""arial""><span style=""font-size: 12pt;"">The submitted Prodly Moover deployment has completed with failures</span><span style=""font-size: 12pt;"">. Please find the&nbsp;deployment result </span><a href=""{!PDRI__Deployment_Result__c.Link}"" style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"">here</a><span style=""font-size: 12pt;"">.</span></font><div style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;""><font face=""arial""><br></font></div><div style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;""><font face=""arial"" style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"">Deployment Result Name:&nbsp;</font><font face=""arial"">{!PDRI__Deployment_Result__c.Name}</font></div><div style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;""><font face=""arial"" style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"">Deployment Result ID:&nbsp;</font><font face=""arial"">{!PDRI__Deployment_Result__c.Id}</font></div><div><font face=""arial"" style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"">Deployment Result:&nbsp;</font><font face=""arial"">{!PDRI__Deployment_Result__c.PDRI__Result__c}</font></div><div><font face=""arial"" style=""font-family: arial; font-size: 12pt;"">Deployment Status:&nbsp;</font><font face=""arial"">{!PDRI__Deployment_Result__c.PDRI__Status__c}</font></div><div style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;""><font face=""arial"">Source Connection:&nbsp;{!PDRI__Deployment_Result__c.PDRI__Source_Connection__c}</font></div><div style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;""><font face=""arial"">Target Connection:&nbsp;{!PDRI__Deployment_Result__c.PDRI__Target_Connection__c}</font></div><div style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;""><font face=""arial""><br></font></div><div style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;""><font face=""arial""><br></font></div>]]></td>
+</tr>
+</table>",true,"#N/A",Notify Deployment Failed Template,"#N/A",Prodly Moover Deployment Failed,freeForm,html,Aloha
+96212c89-99f9-4bb6-9c8d-8ef45760a491,47.0,"#N/A",CC Order Confirmation page,CC_Order_Confirm,ISO-8859-1,"#N/A",true,"<messaging:emailTemplate renderUsingSystemContextWithoutSharing=""true"" subject=""Order Confirmation"" recipientType=""Contact"" relatedToType=""ccrz__E_Order__c"">
+<messaging:plainTextEmailBody >
+Congratulations!
+This is the plain text version<br />
+include component here
+</messaging:plainTextEmailBody>
+<messaging:htmlEmailBody >
+<html>
+<style type=""text/css"">
+body {
+    background-color:#2F2F2F;
+}
+
+table {
+    background-color: #FFFFFF;
+    border: 2px solid;
+    border-radius: 10px;
+    webkit-border-radius: 10px;
+    moz-border-radius: 10px;
+}
+        
+h {
+    color: #0d6bab;
+    font-family: ProximaNovaBold, Arial, Helvetica, sans-serif;
+}
+          
+h2 {
+    color: #0d6bab;
+    font-family: ProximaNovaBold, Arial, Helvetica, sans-serif;
+}
+
+h3 {
+    color: #0d6bab;
+    width:450px;
+    word-wrap: break-word;
+    font-family: ProximaNovaBold, Arial, Helvetica, sans-serif;
+}
+
+.emailFooter-Div{
+    color: #0d6bab;
+    font-family: ProximaNovaBold, Arial, Helvetica, sans-serif;
+}
+
+.orderItemsProductNameHeading-TD .orderItemsProductName-TD {
+    width:50%;
+}
+
+.orderItemsProductPriceHeading-TD .orderItemsProductPricing-TD {
+    width:110px;
+}
+
+.orderItemsProductQty-TD .orderItemsProductQtyHeading-TD {
+    width:10%;
+}
+
+.totalsSbtAmt-TD {
+    text-align:right;
+    width:20%;
+}
+
+.orderItemsProductTotalHeading-TD .orderItemsProductSubAmt-TD .totalsSbtLbl-TD .totalsShipLbl-TD .totalsShipAmt-TD .totalsTaxLbl-TD .totalsTaxAmt-TD .totalsGTotalLbl-TD .totalsGTotalAmt-TD{
+    width:20%;
+}
+
+.orderItemsTieredPricingApplied {
+    color: #808080;
+}
+
+.spacerTD {
+	width:60%;
+}
+</style>
+
+<head>
+</head>
+<body>
+
+<c:cc_OrderSummaryNew porderID=""{!relatedTo.ID}"" pOrderComplete=""true"" />
+</body>
+</html>
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>",CC Order Confirm,"#N/A","#N/A",none,visualforce,Aloha
+a6187725-f020-4827-8779-ed6d394a8f57,"#N/A","You recently attempted an action in {!Community_Name}.
+Action: {!Action}
+
+Browser: {!Browser}
+Operating System: {!Operating_System}
+Username: {!Receiving_User.Username}
+
+To ensure your account's security, we must verify your identity. Enter the following code where prompted by {!Community_Name}.
+
+Verification Code: {!Verification_Code}
+
+If you didn't attempt this action in {!Community_Name}, or you don't recognize this browser or operating system, contact your {!Community_Name} administrator.
+        ",Email that users receive with their verification code.,CommunityVerificationEmailTemplate,UTF-8,"#N/A",true,"#N/A",Communities: One-Time Password Email,"#N/A",Verify your identity in {!Community_Name},none,text,Aloha
+aae519fe-d08f-4b2a-8974-c6d551a0f3ab,"#N/A","Hi {!User.FirstName},
+
+We received a request to change the email address for the username {!User.Username}.  Please make sure the following changes are correct:
+ 
+Previous email address: {!ChgEmailVer.OldEmail}
+New email address: {!ChgEmailVer.NewEmail}
+
+To finish changing your email address, go to the following link. This link expires in 72 hours. 
+{!ChgEmailVer.Url}
+        ",Email that users receive on their new email when their email is changed,CommunityChgEmailVerNewTemplate,UTF-8,"#N/A",true,"#N/A",Communities: New Email - Change Email Verification,"#N/A",Finish changing your {!Community_Name} account’s email address,none,text,Aloha
+b63c8151-f99e-4b16-9ee3-a86609eab6f8,"#N/A","
+
+Dear {!Contact.FirstName},
+
+Thank you for contacting customer support.  Your new Self-Service portal password can be found below.
+
+Thank you,
+
+{!User_Name}
+{!Organization.Name} Customer Support
+",Notification of new password when Self-Service password is reset,SUPPORTSelfServiceResetPasswordSAMPLE,ISO-8859-1,"#N/A",true,"#N/A",SUPPORT:  Self-Service Reset Password  (SAMPLE),"#N/A",Your new {!Organization.Name} Self-Service password,none,text,Aloha
+b87c426a-f1db-436d-bf8a-6531d685b9fc,"#N/A","Dear {!Contact.FirstName},   
+
+{!Case.Solution_Description}   
+
+Thank you,   
+{!User.Name} 
+{!Organization.Name}   
+
+Your comment:   
+{!Case.Description} 
+
+{!Case.Solution_Attachments}",Standard template for responses to customer inquiries.,SUPPORTCaseResponsewithSolutionSAMPLE,ISO-8859-1,"#N/A",true,"#N/A",SUPPORT: Case Response with Solution (SAMPLE),"#N/A",Case {!Case.CaseNumber}:  {!Case.Subject},none,text,Aloha
+baac3912-ee7f-4cc7-bce8-897550dbbce8,"#N/A","Hi {!User.FirstName},
+
+We received a request to change the email address for the username {!User.Username}.  Please make sure the following changes are correct:
+
+Previous email address: {!ChgEmailVer.OldEmail}
+New email address: {!ChgEmailVer.NewEmail}
+
+If you didn't request this change, contact your {!Community_Name} administrator or reply to this email.
+        ",Email that users receive on their old email when their email is changed,CommunityChgEmailVerOldTemplate,UTF-8,"#N/A",true,"#N/A",Communities: Old Email - Change Email Verification,"#N/A",Your {!Community_Name} account’s email address was changed,none,text,Aloha
+bb6a7af3-540d-4e86-b41b-3592c29ad412,47.0,"#N/A",Order Complete Email Template,CC_Order_Complete,ISO-8859-1,"#N/A",true,"<messaging:emailTemplate subject=""Order Complete"" recipientType=""Contact"" relatedToType=""ccrz__E_Order__c"">
+<messaging:plainTextEmailBody >
+Congratulations!
+This is the plain text version<br />
+include component here
+</messaging:plainTextEmailBody>
+ 
+<messaging:htmlEmailBody >
+<html>
+<STYLE type=""text/css"">
+body {
+    background-color:#2F2F2F;
+}
+        
+h {
+    color: #0d6bab;
+    font-family: ProximaNovaBold, Arial, Helvetica, sans-serif;
+}
+          
+h2 {
+    color: #0d6bab;
+    font-family: ProximaNovaBold, Arial, Helvetica, sans-serif;
+}
+
+h3 {
+    color: #0d6bab;
+    font-family: ProximaNovaBold, Arial, Helvetica, sans-serif;
+    float:left;
+    margin:0;
+}
+
+.email-table1{
+    background-color: #FFFFFF;
+    border: 2px solid;
+    border-radius: 10px;
+    webkit-border-radius: 10px;
+    moz-border-radius: 10px;
+}
+
+td { 
+    border-spacing:10px; 
+    cell-padding:10px; 
+    cell-spacing:10px; 
+}
+
+.orderSummaryTable {
+    width:550px;
+}
+
+.orderSummary-TD {
+    width:550px;
+}
+
+.shippedItems-ProductName-TD {
+    width:50%;
+}
+
+.shippedItems-Qty-TD {
+    width:10%;
+}
+
+.shippedItems-ProductSku-TD {
+    width:50%;
+}
+
+.shippedItems-ProductQty-TD {
+	width:10%;
+}
+
+</STYLE>
+<head>
+</head>
+<body>
+<!-- Temporarily commenting out the component include to test QA package install -->
+<!-- <c:cc_OrderShippedSummary porderID=""{!relatedTo.ID}"" pOrderComplete=""true"" /> -->
+</body>
+</html>
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>",CC Order Complete,"#N/A","#N/A",none,visualforce,Aloha
+d76fc097-1fa0-44dd-b718-d940c670437b,"#N/A","You recently attempted an action in {!Community_Name}.
+            Action: {!Action}
+
+            Browser: {!Browser}
+            Operating System: {!Operating_System}
+            Username: {!Receiving_User.Username}
+
+            To ensure your account's security, we must verify your identity. Enter the following code where prompted by {!Community_Name}.
+
+            Verification Code: {!Verification_Code}
+
+            If you didn't attempt this action in {!Community_Name}, or you don't recognize this browser or operating system, contact your {!Community_Name} administrator.
+        ",Email that users receive with their verification code.,CommunityDeviceActEmailTemplate,UTF-8,"#N/A",true,"#N/A",Experience Cloud: Device Activation Verification Email,"#N/A",Verify your identity in {!Community_Name},none,text,Aloha
+d7e3662e-fc91-411e-ab60-9a7037c476dd,"#N/A","
+            Hi {!Receiving_User.FirstName},
+
+            Welcome to {!Community_Name}! To get started, go to {!Community_Url}
+
+            Username: {!Receiving_User.Username}
+
+            Thanks,
+            {!Organization.Name}
+        ",Notification that user has been added to a community.,CommunityWelcomeEmailTemplate,UTF-8,"#N/A",true,"#N/A",Communities: New Member Welcome Email,"#N/A",Welcome to {!Community_Name},none,text,Aloha
+d84f1f7b-768b-402e-9e3e-bda0d680ae50,"#N/A","Dear {!Case.SuppliedName},   
+
+Thank you for submitting your question to us online. Case #{!Case.CaseNumber}: ""{!Case.Subject}"" has been created and a {!Organization.Name} Customer Advocate will respond to you shortly.   
+
+Thank you,   
+Customer Advocate Team  {!Organization.Name}",Auto-response when new case is submitted online.,SUPPORTWebtoCaseemailresponseSAMPLE,ISO-8859-1,"#N/A",true,"#N/A",SUPPORT:  Web-to-Case email response (SAMPLE),"#N/A",{!Organization.Name} Case # {!Case.CaseNumber}:  {!Case.Subject},none,text,Aloha
+dae00201-fa70-4680-8d88-371bd45ecdfb,"#N/A","Dear {!Contact.FirstName},  
+
+I really enjoyed speaking with you today.  I think that {!Organization.Name} has a lot to offer {!Account.Name} and I look forward to our next meeting.  
+
+Regards,  {!User.FirstName}",Follow up on meeting,ContactFollowUpSAMPLE,ISO-8859-1,"#N/A",true,"#N/A",Contact: Follow Up (SAMPLE),"#N/A",Following up on our discussion today,none,text,Aloha
+e1cb65b8-0c6c-46f1-af06-94172992e323,"#N/A","
+              We hit a snag with your registration to {!Community_Name}.
+
+
+              Please resolve the following error: 
+
+{!SelfReg_MicroBatch_Error}
+
+
+              Go to {!Community_Url} to try again, or contact your administrator for help.
+
+
+              Thank you,
+
+              {!Organization.Name}
+        ",This email template applies to self-registration requests that are processed in batches after the request is submitted. A user receives this email when there is an error processing their self-registration request.,ExperienceCloudSelfRegMicroBatchSubErrorEmailTemplate,UTF-8,"#N/A",true,"#N/A",Experience Cloud: Self-Registration Micro-Batch Submission Error User Email,"#N/A",Your registration to {!Community_Name} has failed,none,text,Aloha
+e58970b2-aef8-4c8a-a57a-f9f0eaad5f58,"#N/A","
+
+Your case # {!Case.CaseNumber}: {!Case.Subject} has been updated.  Please click on the link below
+to view this case on the Self-Service portal.
+<insert the link to your Self-Service portal login page here>
+
+{!Organization.Name} Customer Support
+",Sample email template that can be sent to your Self-Service customers to notify them a public comment has been added to their case.,SUPPORTSelfServiceNewCommentNotificationSAMPLE,ISO-8859-1,"#N/A",true,"#N/A",SUPPORT:  Self-Service New Comment Notification (SAMPLE),"#N/A",Your case {!Case.CaseNumber} has been updated,none,text,Aloha
+f2c644ed-9a19-4830-9fed-e432c41f7092,"#N/A","
+            Hi {!Receiving_User.FirstName},
+
+            Your password has been reset for {!Community_Name}. Go to:
+
+            {!Community_Url}
+
+            Thanks,
+            {!Organization.Name}
+        ",Notification of new password,CommunityChangePasswordEmailTemplate,UTF-8,"#N/A",true,"#N/A",Communities: Changed Password Email,"#N/A",Your new {!Community_Name} password,none,text,Aloha
+f6c0c58e-a63f-4de0-85a0-0d4231dca3f2,"#N/A","The submitted Prodly Moover deployment has completed successfully. Please find the deployment result here.
+
+Deployment Result Name: {!PDRI__Deployment_Result__c.Name}
+Deployment Result ID: {!PDRI__Deployment_Result__c.Id}
+Deployment Result: {!PDRI__Deployment_Result__c.PDRI__Result__c}
+Deployment Status: {!PDRI__Deployment_Result__c.PDRI__Status__c}
+Source Connection: {!PDRI__Deployment_Result__c.PDRI__Source_Connection__c}
+Target Connection: {!PDRI__Deployment_Result__c.PDRI__Target_Connection__c}","#N/A",Notify_Deployment_Succeeded_Template,ISO-8859-1,"<table height=""400"" width=""550"" cellpadding=""5"" border=""0"" cellspacing=""5"" >
+<tr height=""400"" valign=""top"" >
+<td style="" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;"" tEditID=""c1r1"" locked=""0"" aEditID=""c1r1"" >
+<![CDATA[<font face=""arial""><span style=""font-size: 12pt;"">The submitted Prodly Moover deployment has completed s</span>uccessfully<span style=""font-size: 12pt;"">. Please find the&nbsp;deployment result </span><a href=""{!PDRI__Deployment_Result__c.Link}"" style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"">here</a><span style=""font-size: 12pt;"">.</span></font><div style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;""><font face=""arial""><br></font></div><div style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;""><font face=""arial"" style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"">Deployment Result Name:&nbsp;</font><font face=""arial"">{!PDRI__Deployment_Result__c.Name}</font></div><div style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;""><font face=""arial"" style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"">Deployment Result ID:&nbsp;</font><font face=""arial"">{!PDRI__Deployment_Result__c.Id}</font></div><div><font face=""arial"" style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"">Deployment Result:&nbsp;</font><font face=""arial"">{!PDRI__Deployment_Result__c.PDRI__Result__c}</font></div><div><font face=""arial"" style=""font-family: arial; font-size: 12pt;"">Deployment Status:&nbsp;</font><font face=""arial"">{!PDRI__Deployment_Result__c.PDRI__Status__c}</font></div><div style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;""><font face=""arial"">Source Connection:&nbsp;{!PDRI__Deployment_Result__c.PDRI__Source_Connection__c}</font></div><div style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;""><font face=""arial"">Target Connection:&nbsp;{!PDRI__Deployment_Result__c.PDRI__Target_Connection__c}</font></div><div style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;""><font face=""arial""><br></font></div><div style=""color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;""><font face=""arial""><br></font></div>]]></td>
+</tr>
+</table>",true,"#N/A",Notify Deployment Succeeded Template,"#N/A",Prodly Moover Deployment Completed Successfully,freeForm,html,Aloha
