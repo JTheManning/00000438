@@ -70,7 +70,7 @@ beb91e48-aa28-4913-9991-0a0b4fd7b43b,Lookup Approval Level 1 [Discount],false,"#
 bf564133-da0a-4385-acfd-c259d99d86b0,Lookup Approval Level 3 [Discount],false,"#N/A",All,"#N/A",On Initialization,53.0,Approval_Threshold__c,Calculator
 c686494b-819b-49cb-b699-8414534ae052,Billing Frequency Approval,false,"#N/A",All,"#N/A",On Initialization;On Calculate,20.0,"#N/A",Calculator
 c912ecb9-1743-4f24-a8c2-30cdc54a6a0c,NEW PRICE RULE 5,false,"#N/A",All,"#N/A",On Calculate,"#N/A","#N/A",Configurator
-ca6d3ef4-86a3-46e6-b7b8-c0f7eaf62e14,**Prodly Price Rule,false,"#N/A",Any,"#N/A",On Calculate,"#N/A",SBQQ__LookupData__c,Calculator
+ca6d3ef4-86a3-46e6-b7b8-c0f7eaf62e14,**Prodly Price Rule,true,"#N/A",Any,"#N/A",On Calculate,"#N/A",SBQQ__LookupData__c,Calculator
 cb7cd5d1-d1cb-4185-b162-a6141664d704,Billing Frequency Approval,false,"#N/A",All,"#N/A",On Initialization;On Calculate,20.0,"#N/A",Calculator
 cd6a3760-2ff3-4a0c-a33e-56575066d86b,Set True Discretionary Discount %,false,"#N/A",All,"#N/A",After Calculate,98.0,"#N/A",Calculator
 d18743af-8724-47da-a1a9-4ed14e94bf57,Training Price Rule - deactivate,false,"#N/A",All,"#N/A",Before Calculate,"#N/A","#N/A",Calculator
