@@ -1,6 +1,5 @@
 "Guid","ApiVersion","Body","Description","DeveloperName","Encoding","HtmlValue","IsActive","Markup","Name","RelatedEntityType","Subject","TemplateStyle","TemplateType","UiType"
-0042ddac-bc78-4a66-83c3-cfcf93ed625c,"#N/A","
-            Hello {!Receiving_User.FirstName},
+0042ddac-bc78-4a66-83c3-cfcf93ed625c,"#N/A","Hello {!Receiving_User.FirstName},
 
             We received your request to reset your {!Community_Name} password. We can't reset your password right now. Your account is locked after too many login attempts.
 
@@ -12,8 +11,7 @@
             If you didn't request a password reset or haven't tried to log in to your account recently, contact your {!Community_Name} administrator or reply to this email.
 
             Thank you,
-            {!Community_Name}
-        ","Email a user receives when they try to reset their password, but have been locked out because of too many failed login attempts.",CommunityLockoutEmailTemplate,UTF-8,"#N/A",true,"#N/A",Communities: User Lockout Email,"#N/A",You've been locked out of {!Community_Name},none,text,Aloha
+            {!Community_Name}","Email a user receives when they try to reset their password, but have been locked out because of too many failed login attempts.",CommunityLockoutEmailTemplate,UTF-8,"#N/A",true,"#N/A",Communities: User Lockout Email,"#N/A",You've been locked out of {!Community_Name},none,text,Aloha
 0d75d5a9-06f9-4ca7-a5c1-beaf8778c9cd,"#N/A","The submitted Prodly Moover deployment has started. Please find the deployment result here.
 
 Deployment Result Name: {!PDRI__Deployment_Result__c.Name}
@@ -32,16 +30,14 @@ Company:  {!Lead.Company}
 Lead Name:  {!Lead.Name}  
 
 Click on the link to access the lead directly:  {!Lead.Link}",Internal notification to lead owner when new lead is assigned.,LeadsNewassignmentnotificationSAMPLE,ISO-8859-1,"#N/A",true,"#N/A",Leads:  New assignment notification (SAMPLE),"#N/A",New lead assigned to you:  {!Lead.Name} from {!Lead.Company},none,text,Aloha
-4916b895-fac1-40a2-b464-042031911cb2,"#N/A","
-            Hi {!Receiving_User.FirstName},
+4916b895-fac1-40a2-b464-042031911cb2,"#N/A","Hi {!Receiving_User.FirstName},
 
             Your password has been reset for {!Community_Name}. Go to:
 
             {!Community_Url}
 
             Thanks,
-            {!Organization.Name}
-        ",Notification of new password when a user’s password is reset (because they forgot it),CommunityForgotPasswordEmailTemplate,UTF-8,"#N/A",true,"#N/A",Communities: Forgot Password Email,"#N/A",Your new {!Community_Name} password,none,text,Aloha
+            {!Organization.Name}",Notification of new password when a user’s password is reset (because they forgot it),CommunityForgotPasswordEmailTemplate,UTF-8,"#N/A",true,"#N/A",Communities: Forgot Password Email,"#N/A",Your new {!Community_Name} password,none,text,Aloha
 4f7079ea-56b4-4f47-8ca8-b9565ea3aa30,"#N/A","*** NEW CASE ASSIGNMENT NOTIFICATION ***  
 
 The following case has been assigned to you.  
@@ -60,16 +56,13 @@ Case:  {!Case.CaseNumber}:  {!Case.Subject}
 Owner:  {!Case.OwnerFullName}  
 
 Click on the link to access the case:  {!Case.Link}",Internal notification when case is escalated.,SUPPORTCaseescalationnotificationSAMPLE,ISO-8859-1,"#N/A",true,"#N/A",SUPPORT: Case escalation notification (SAMPLE),"#N/A",Case # {!Case.CaseNumber}: {!Case.Subject} has been escalated.,none,text,Aloha
-638bc1d2-d55e-41fd-8de1-c1625788b467,"#N/A","
-
-Dear {!Contact.FirstName},
+638bc1d2-d55e-41fd-8de1-c1625788b467,"#N/A","Dear {!Contact.FirstName},
 
 Your {!Organization.Name} Self-Service portal login and password information is below.
 
 Thank you,
 
-{!Organization.Name} Customer Support
-",Notification of login and password to new Self-Service user,SUPPORTSelfServiceNewUserLoginInformationSAMPLE,ISO-8859-1,"#N/A",true,"#N/A",SUPPORT:  Self-Service New User Login Information (SAMPLE),"#N/A",Your {!Organization.Name} Self-Service username and password,none,text,Aloha
+{!Organization.Name} Customer Support",Notification of login and password to new Self-Service user,SUPPORTSelfServiceNewUserLoginInformationSAMPLE,ISO-8859-1,"#N/A",true,"#N/A",SUPPORT:  Self-Service New User Login Information (SAMPLE),"#N/A",Your {!Organization.Name} Self-Service username and password,none,text,Aloha
 7111c09c-7717-48a5-892d-7c1595a1591c,"#N/A","Dear {!Lead.Name},  
 
 Thank you for your interest in {!Organization.Name}.  We will be contacting you shortly.    
@@ -181,8 +174,7 @@ To ensure your account's security, we must verify your identity. Enter the follo
 
 Verification Code: {!Verification_Code}
 
-If you didn't attempt this action in {!Community_Name}, or you don't recognize this browser or operating system, contact your {!Community_Name} administrator.
-        ",Email that users receive with their verification code.,CommunityVerificationEmailTemplate,UTF-8,"#N/A",true,"#N/A",Communities: One-Time Password Email,"#N/A",Verify your identity in {!Community_Name},none,text,Aloha
+If you didn't attempt this action in {!Community_Name}, or you don't recognize this browser or operating system, contact your {!Community_Name} administrator.",Email that users receive with their verification code.,CommunityVerificationEmailTemplate,UTF-8,"#N/A",true,"#N/A",Communities: One-Time Password Email,"#N/A",Verify your identity in {!Community_Name},none,text,Aloha
 aae519fe-d08f-4b2a-8974-c6d551a0f3ab,"#N/A","Hi {!User.FirstName},
 
 We received a request to change the email address for the username {!User.Username}.  Please make sure the following changes are correct:
@@ -191,19 +183,15 @@ Previous email address: {!ChgEmailVer.OldEmail}
 New email address: {!ChgEmailVer.NewEmail}
 
 To finish changing your email address, go to the following link. This link expires in 72 hours. 
-{!ChgEmailVer.Url}
-        ",Email that users receive on their new email when their email is changed,CommunityChgEmailVerNewTemplate,UTF-8,"#N/A",true,"#N/A",Communities: New Email - Change Email Verification,"#N/A",Finish changing your {!Community_Name} account’s email address,none,text,Aloha
-b63c8151-f99e-4b16-9ee3-a86609eab6f8,"#N/A","
-
-Dear {!Contact.FirstName},
+{!ChgEmailVer.Url}",Email that users receive on their new email when their email is changed,CommunityChgEmailVerNewTemplate,UTF-8,"#N/A",true,"#N/A",Communities: New Email - Change Email Verification,"#N/A",Finish changing your {!Community_Name} account’s email address,none,text,Aloha
+b63c8151-f99e-4b16-9ee3-a86609eab6f8,"#N/A","Dear {!Contact.FirstName},
 
 Thank you for contacting customer support.  Your new Self-Service portal password can be found below.
 
 Thank you,
 
 {!User_Name}
-{!Organization.Name} Customer Support
-",Notification of new password when Self-Service password is reset,SUPPORTSelfServiceResetPasswordSAMPLE,ISO-8859-1,"#N/A",true,"#N/A",SUPPORT:  Self-Service Reset Password  (SAMPLE),"#N/A",Your new {!Organization.Name} Self-Service password,none,text,Aloha
+{!Organization.Name} Customer Support",Notification of new password when Self-Service password is reset,SUPPORTSelfServiceResetPasswordSAMPLE,ISO-8859-1,"#N/A",true,"#N/A",SUPPORT:  Self-Service Reset Password  (SAMPLE),"#N/A",Your new {!Organization.Name} Self-Service password,none,text,Aloha
 b87c426a-f1db-436d-bf8a-6531d685b9fc,"#N/A","Dear {!Contact.FirstName},   
 
 {!Case.Solution_Description}   
@@ -223,8 +211,7 @@ We received a request to change the email address for the username {!User.Userna
 Previous email address: {!ChgEmailVer.OldEmail}
 New email address: {!ChgEmailVer.NewEmail}
 
-If you didn't request this change, contact your {!Community_Name} administrator or reply to this email.
-        ",Email that users receive on their old email when their email is changed,CommunityChgEmailVerOldTemplate,UTF-8,"#N/A",true,"#N/A",Communities: Old Email - Change Email Verification,"#N/A",Your {!Community_Name} account’s email address was changed,none,text,Aloha
+If you didn't request this change, contact your {!Community_Name} administrator or reply to this email.",Email that users receive on their old email when their email is changed,CommunityChgEmailVerOldTemplate,UTF-8,"#N/A",true,"#N/A",Communities: Old Email - Change Email Verification,"#N/A",Your {!Community_Name} account’s email address was changed,none,text,Aloha
 bb6a7af3-540d-4e86-b41b-3592c29ad412,47.0,"#N/A",Order Complete Email Template,CC_Order_Complete,ISO-8859-1,"#N/A",true,"<messaging:emailTemplate subject=""Order Complete"" recipientType=""Contact"" relatedToType=""ccrz__E_Order__c"">
 <messaging:plainTextEmailBody >
 Congratulations!
@@ -315,18 +302,15 @@ d76fc097-1fa0-44dd-b718-d940c670437b,"#N/A","You recently attempted an action in
 
             Verification Code: {!Verification_Code}
 
-            If you didn't attempt this action in {!Community_Name}, or you don't recognize this browser or operating system, contact your {!Community_Name} administrator.
-        ",Email that users receive with their verification code.,CommunityDeviceActEmailTemplate,UTF-8,"#N/A",true,"#N/A",Experience Cloud: Device Activation Verification Email,"#N/A",Verify your identity in {!Community_Name},none,text,Aloha
-d7e3662e-fc91-411e-ab60-9a7037c476dd,"#N/A","
-            Hi {!Receiving_User.FirstName},
+            If you didn't attempt this action in {!Community_Name}, or you don't recognize this browser or operating system, contact your {!Community_Name} administrator.",Email that users receive with their verification code.,CommunityDeviceActEmailTemplate,UTF-8,"#N/A",true,"#N/A",Experience Cloud: Device Activation Verification Email,"#N/A",Verify your identity in {!Community_Name},none,text,Aloha
+d7e3662e-fc91-411e-ab60-9a7037c476dd,"#N/A","Hi {!Receiving_User.FirstName},
 
             Welcome to {!Community_Name}! To get started, go to {!Community_Url}
 
             Username: {!Receiving_User.Username}
 
             Thanks,
-            {!Organization.Name}
-        ",Notification that user has been added to a community.,CommunityWelcomeEmailTemplate,UTF-8,"#N/A",true,"#N/A",Communities: New Member Welcome Email,"#N/A",Welcome to {!Community_Name},none,text,Aloha
+            {!Organization.Name}",Notification that user has been added to a community.,CommunityWelcomeEmailTemplate,UTF-8,"#N/A",true,"#N/A",Communities: New Member Welcome Email,"#N/A",Welcome to {!Community_Name},none,text,Aloha
 d84f1f7b-768b-402e-9e3e-bda0d680ae50,"#N/A","Dear {!Case.SuppliedName},   
 
 Thank you for submitting your question to us online. Case #{!Case.CaseNumber}: ""{!Case.Subject}"" has been created and a {!Organization.Name} Customer Advocate will respond to you shortly.   
@@ -338,8 +322,7 @@ dae00201-fa70-4680-8d88-371bd45ecdfb,"#N/A","Dear {!Contact.FirstName},
 I really enjoyed speaking with you today.  I think that {!Organization.Name} has a lot to offer {!Account.Name} and I look forward to our next meeting.  
 
 Regards,  {!User.FirstName}",Follow up on meeting,ContactFollowUpSAMPLE,ISO-8859-1,"#N/A",true,"#N/A",Contact: Follow Up (SAMPLE),"#N/A",Following up on our discussion today,none,text,Aloha
-e1cb65b8-0c6c-46f1-af06-94172992e323,"#N/A","
-              We hit a snag with your registration to {!Community_Name}.
+e1cb65b8-0c6c-46f1-af06-94172992e323,"#N/A","We hit a snag with your registration to {!Community_Name}.
 
 
               Please resolve the following error: 
@@ -352,26 +335,20 @@ e1cb65b8-0c6c-46f1-af06-94172992e323,"#N/A","
 
               Thank you,
 
-              {!Organization.Name}
-        ",This email template applies to self-registration requests that are processed in batches after the request is submitted. A user receives this email when there is an error processing their self-registration request.,ExperienceCloudSelfRegMicroBatchSubErrorEmailTemplate,UTF-8,"#N/A",true,"#N/A",Experience Cloud: Self-Registration Micro-Batch Submission Error User Email,"#N/A",Your registration to {!Community_Name} has failed,none,text,Aloha
-e58970b2-aef8-4c8a-a57a-f9f0eaad5f58,"#N/A","
-
-Your case # {!Case.CaseNumber}: {!Case.Subject} has been updated.  Please click on the link below
+              {!Organization.Name}",This email template applies to self-registration requests that are processed in batches after the request is submitted. A user receives this email when there is an error processing their self-registration request.,ExperienceCloudSelfRegMicroBatchSubErrorEmailTemplate,UTF-8,"#N/A",true,"#N/A",Experience Cloud: Self-Registration Micro-Batch Submission Error User Email,"#N/A",Your registration to {!Community_Name} has failed,none,text,Aloha
+e58970b2-aef8-4c8a-a57a-f9f0eaad5f58,"#N/A","Your case # {!Case.CaseNumber}: {!Case.Subject} has been updated.  Please click on the link below
 to view this case on the Self-Service portal.
 <insert the link to your Self-Service portal login page here>
 
-{!Organization.Name} Customer Support
-",Sample email template that can be sent to your Self-Service customers to notify them a public comment has been added to their case.,SUPPORTSelfServiceNewCommentNotificationSAMPLE,ISO-8859-1,"#N/A",true,"#N/A",SUPPORT:  Self-Service New Comment Notification (SAMPLE),"#N/A",Your case {!Case.CaseNumber} has been updated,none,text,Aloha
-f2c644ed-9a19-4830-9fed-e432c41f7092,"#N/A","
-            Hi {!Receiving_User.FirstName},
+{!Organization.Name} Customer Support",Sample email template that can be sent to your Self-Service customers to notify them a public comment has been added to their case.,SUPPORTSelfServiceNewCommentNotificationSAMPLE,ISO-8859-1,"#N/A",true,"#N/A",SUPPORT:  Self-Service New Comment Notification (SAMPLE),"#N/A",Your case {!Case.CaseNumber} has been updated,none,text,Aloha
+f2c644ed-9a19-4830-9fed-e432c41f7092,"#N/A","Hi {!Receiving_User.FirstName},
 
             Your password has been reset for {!Community_Name}. Go to:
 
             {!Community_Url}
 
             Thanks,
-            {!Organization.Name}
-        ",Notification of new password,CommunityChangePasswordEmailTemplate,UTF-8,"#N/A",true,"#N/A",Communities: Changed Password Email,"#N/A",Your new {!Community_Name} password,none,text,Aloha
+            {!Organization.Name}",Notification of new password,CommunityChangePasswordEmailTemplate,UTF-8,"#N/A",true,"#N/A",Communities: Changed Password Email,"#N/A",Your new {!Community_Name} password,none,text,Aloha
 f6c0c58e-a63f-4de0-85a0-0d4231dca3f2,"#N/A","The submitted Prodly Moover deployment has completed successfully. Please find the deployment result here.
 
 Deployment Result Name: {!PDRI__Deployment_Result__c.Name}
